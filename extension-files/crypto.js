@@ -84,7 +84,8 @@
         ],
         menus: {
             hashes: ["MD5", "SHA1", "SHA256", "SHA512", "SHA3", "RIPEMD160"]
-        }
+        },
+        url: 'https://as-com.github.io/scratch-comp09-toolbelt/'
     };
 
     // Register the extension
