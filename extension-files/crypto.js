@@ -8,7 +8,7 @@
         return {status: 2, msg: 'Ready'};
     };
     
-    ext.hash(string, algo) {
+    ext.hash = function(string, algo) {
         var md = forge.md[algo].create();
         md.update(string);
         return md.digest().toHex();
