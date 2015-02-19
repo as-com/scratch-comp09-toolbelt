@@ -51,5 +51,8 @@ var toolbeltReady = false;
 	// 	console.log("loaded comp09 toolbelt scripts");
 	// 	toolbeltReady = true;
 	// });
+	
+	// Load base64 polyfill
+	head.test((window.btoa && window.atob), [], bp + "lib/base64.min.js");
 
 })();
