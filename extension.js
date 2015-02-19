@@ -10,6 +10,7 @@ var toolbeltReady = false;
 	var bp = "//as-com.github.io/scratch-comp09-toolbelt/extension-files/";
 	$LAB
 	.setOptions({UseLocalXHR:false})
+	.script(bp + "general.js")
 	.script(bp + "lib/forge.min.js").wait()
 	.script(bp + "crypto.js").wait(function(){
 		console.log("loaded comp09 toolbelt scripts");
