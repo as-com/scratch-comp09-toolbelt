@@ -7,11 +7,21 @@
     ext._getStatus = function() {
         return {status: 2, msg: 'Ready'};
     };
+    
+    ext.hash(string, algo) {
+        var md = forge.md[algo].create();
+        md.update(string);
+        return md.digest().toHex();
+    }
 
     // Block and block menu descriptions
     var descriptor = {
         blocks: [
-        ]
+            ['r', 'hash of %s with %m.hashes', 'hash', "hello world"],
+        ],
+        menus: {
+            hashes: ["sha1", "sha256", "sha384", "sha512", "md5"]
+        }
     };
 
     // Register the extension
