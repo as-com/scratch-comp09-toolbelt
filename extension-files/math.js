@@ -27,7 +27,7 @@
             ['r', '%n ^ %n', 'exp'],
             ['r', "join%s%s%s%s", "joinFour"],
             ['b', '%s != %s (case sensitive)', 'neq'],
-            ['b', "%s = s (case sensitive)", "eq"]
+            ['b', "%s = %s (case sensitive)", "eq"]
         ],
         menus: {
             
