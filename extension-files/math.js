@@ -17,8 +17,8 @@
     ext.eq = function(a, b) {
         return (a != b);
     }
-    ext.join = function(a, b, c, d) {
-        return String(String(a) + String(b) + String(c) + String(d));
+    ext.joinFour = function(a, b, c, d) {
+        return String(a) + String(b) + String(c) + String(d);
     }
     
     // Block and block menu descriptions
