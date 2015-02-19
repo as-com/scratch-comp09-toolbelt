@@ -26,7 +26,7 @@
     ext.lte = function(a, b) {
         return (a <= b);
     }
-    ext.compactIfElse(cond, a, b) {
+    ext.compactIfElse = function(cond, a, b) {
         if (cond) {
             return a;
         } else {
