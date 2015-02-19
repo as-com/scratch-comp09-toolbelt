@@ -67,7 +67,8 @@
     var descriptor = {
         blocks: [
             ['r', 'hash %s with %m.hashes', 'hash', "hello world"],
-            ['r', 'aes %s with passphrase %s', "aesEncrypt", "message", "secret"]
+            ['r', 'aes encrypt %s with passphrase %s', "aesEncrypt", "message", "secret"],
+            ['r', 'aes decrypt %s with passphrase %s', "aesDecrypt", "encrypted", "secret"]
         ],
         menus: {
             hashes: ["MD5", "SHA1", "SHA256", "SHA512", "SHA3", "RIPEMD160"]
