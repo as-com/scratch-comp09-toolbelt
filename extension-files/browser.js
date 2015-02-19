@@ -21,13 +21,13 @@
     };
     
     ext.setCookie = function(name, data) {
-        localStorage.setItem(app.projectModel.id.toString() + "_" + name, data);
+        localStorage.setItem("comp09toolbelt_cookie_" + app.projectModel.id.toString() + "_" + name, data);
     }
     ext.getCookie = function(name) {
-        return localStorage.getItem(app.projectModel.id.toString() + "_" + name);
+        return localStorage.getItem("comp09toolbelt_cookie_" + app.projectModel.id.toString() + "_" + name);
     }
     ext.deleteCookie = function(name) {
-        localStorage.removeItem(app.projectModel.id.toString() + "_" + name);
+        localStorage.removeItem("comp09toolbelt_cookie_" + app.projectModel.id.toString() + "_" + name);
     }
 
     // Block and block menu descriptions
