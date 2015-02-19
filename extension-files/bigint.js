@@ -31,9 +31,9 @@
             case "*":
                 return JSON.stringify(mult(one, two));
             case "/":
-                q = new Array(one.length);
-                r = [];
-                divide_(a, b, q, r);
+                var q = new Array(one.length);
+                var r = [];
+                divide_(one, two, q, r);
                 return JSON.stringify(cleanArray(q));
         }
     }
