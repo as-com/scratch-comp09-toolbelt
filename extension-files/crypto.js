@@ -67,10 +67,10 @@
         return decrypted.toString(CryptoJS.enc.Utf8);
     }
     ext.encBase64 = function(message) {
-        return window.atob(message);
+        return window.btoa(message);
     }
     ext.decBase64 = function(base64) {
-        return window.btoa(base64);
+        return window.atob(base64);
     }
 
     // Block and block menu descriptions
