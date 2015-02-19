@@ -26,12 +26,20 @@
     ext.lte = function(a, b) {
         return (a <= b);
     }
+    ext.compactIfElse(cond, a, b) {
+        if (cond) {
+            return a;
+        } else {
+            return b;
+        }
+    }
     
     // Block and block menu descriptions
     var descriptor = {
         blocks: [
             ['r', '%n ^ %n', 'exp', "2", "3"],
             ['r', "join %s %s %s %s", "joinFour", "a", "b", "c", "d"],
+            ['r', "if %b then %s else %s", "compactIfElse", null, "a", "b"],
             ['b', '%s != %s (case sensitive)', 'neq'],
             ['b', "%s = %s (case sensitive)", "eq"],
             ['b', "%n >= %n", 'gte'],
