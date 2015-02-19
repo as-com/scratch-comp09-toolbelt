@@ -8,24 +8,17 @@
         return {status: 2, msg: 'Ready'};
     };
     
-    var bigInts = {};
-    
-    ext.setBigInt = function(name, value) {
-        bigInts[name] = bigInt(value);
-    }
-    ext.getBigInt = function(name, radix) {
-        return bigInts[name].toString(radix);
+    ext.createBigInt = function(number, base) {
+        return JSON.stringify(str2BigInt(number, base));
     }
     
     // Block and block menu descriptions
     var descriptor = {
         blocks: [
-            ['', 'set bigint %s to %s', 'setBigInt', "", "9001"],
-            ['r', 'get bigint %s in radix %n', 'getBigInt', "", "10"],
-            
+            ['r', 'text to bigint %s with base %n', 'createBigInt', "", "9001"],
         ],
         menus: {
-            
+            oneOps: ['abs', '']
         },
         url: 'https://as-com.github.io/scratch-comp09-toolbelt/'
     };
