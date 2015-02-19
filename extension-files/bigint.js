@@ -27,9 +27,9 @@
     // Block and block menu descriptions
     var descriptor = {
         blocks: [
-            ['r', 'text to bigint %s with base %n', 'createBigInt', "9001", "10"],
-            ['r', 'bigint %s %m.operations %s', 'bigIntOperation', "", "+", ""],
-            ['r', 'bigint to text %s with base %n', 'convertBigInt', "", "10"]
+            ['r', '฿ from text %s base %n', 'createBigInt', "9001", "10"],
+            ['r', '฿ %s %m.operations %s', 'bigIntOperation', "", "+", ""],
+            ['r', '฿ to text %s base %n', 'convertBigInt', "", "10"]
         ],
         menus: {
             operations: ['+', '-', '*']
