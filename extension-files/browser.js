@@ -46,3 +46,4 @@
     ScratchExtensions.register('comp09 - browser', descriptor, ext);
     
 })({});
+vex.defaultOptions.className = 'vex-theme-os';
