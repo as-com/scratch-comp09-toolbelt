@@ -61,7 +61,7 @@ var toolbeltReady = false;
 		function(callback) {
 			head.load([
 				// bigint.js dependencies
-				bp + "lib/bigint.min.js",
+				bp + "lib/biginteger.min.js",
 			], function() {
 				head.load(bp + "bigint.js", callback);
 			});
