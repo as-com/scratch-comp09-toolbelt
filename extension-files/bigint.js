@@ -55,7 +55,7 @@
             ['r', '฿ to text %s base %n', 'bigIntToText', "", "10"]
         ],
         menus: {
-            operations: ['+', '-', '*'],
+            operations: ['+', '-', '*', '^', 'mod'],
             boolOps: ['=', '>']
         },
         url: 'https://as-com.github.io/scratch-comp09-toolbelt/'
