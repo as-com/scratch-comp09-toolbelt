@@ -9,7 +9,7 @@
     };
     
     ext.exp = function(base, power) {
-        return Math.pow(base, exponent);
+        return Math.pow(base, power);
     }
     ext.neq = function(a, b) {
         return (a != b);
@@ -18,7 +18,7 @@
         return (a != b);
     }
     ext.join = function(a, b, c, d) {
-        return String(a) + String(b) + String(c) + String(d);
+        return String(String(a) + String(b) + String(c) + String(d));
     }
     
     // Block and block menu descriptions
