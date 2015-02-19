@@ -34,7 +34,7 @@
                 var q = new Array(one.length);
                 var r = [];
                 divide_(one, two, q, r);
-                return JSON.stringify(cleanArray(q));
+                return JSON.stringify(q);
         }
     }
     
