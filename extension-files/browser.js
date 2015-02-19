@@ -61,7 +61,7 @@
         blocks: [
             // Block type, block name, function name, param1 default value, param2 default value
             ['b', 'toolbelt loaded?', 'isReady'],
-            ['w', 'alert %s', 'vexAlert', 'text'],
+            ['w', 'alert %s ok: %s', 'vexAlert', 'text', 'Ok'],
             ['R', 'confirm %s true: %s false: %s', 'vexConfirm', 'text', 'Ok', 'Cancel'],
             ['R', 'prompt %s placeholder: %s ok: %s cancel %s', 'vexPrompt', 'text', 'answer', 'Ok', 'Cancel'],
             ['', 'set cookie %s to %s', 'setCookie', 'name', 'data'],
