@@ -8,16 +8,16 @@
         return {status: 2, msg: 'Ready'};
     };
     
-    ext.exp(base, power) {
+    ext.exp = function(base, power) {
         return Math.pow(base, exponent);
     }
-    ext.neq(a, b) {
+    ext.neq = function(a, b) {
         return (a != b);
     }
-    ext.eq(a, b) {
+    ext.eq = function(a, b) {
         return (a != b);
     }
-    ext.join(a, b, c, d) {
+    ext.join = function(a, b, c, d) {
         return String(a) + String(b) + String(c) + String(d);
     }
     
