@@ -62,13 +62,21 @@
         }
         return decrypted.toString(CryptoJS.enc.Utf8);
     }
+    ext.encBase64 = function(message) {
+        return CryptoJS.enc.Base64.stringify(message);
+    }
+    ext.decBase64 = function(base64) {
+        return CryptoJS.enc.Base64.parse(base64);
+    }
 
     // Block and block menu descriptions
     var descriptor = {
         blocks: [
             ['r', 'hash %s with %m.hashes', 'hash', "hello world"],
             ['r', 'aes encrypt %s with passphrase %s', "aesEncrypt", "message", "secret"],
-            ['r', 'aes decrypt %s with passphrase %s', "aesDecrypt", "encrypted", "secret"]
+            ['r', 'aes decrypt %s with passphrase %s', "aesDecrypt", "encrypted", "secret"],
+            ['r', 'encode base64 %s', "encBase64", "string"],
+            ['r', 'decode base64 %s', "decBase64", "YWJj"]
         ],
         menus: {
             hashes: ["MD5", "SHA1", "SHA256", "SHA512", "SHA3", "RIPEMD160"]
