@@ -9,9 +9,7 @@
     };
     
     ext.hash = function(string, algo) {
-        var md = forge.md[algo].create();
-        md.update(string);
-        return md.digest().toHex();
+        return CryptoJS[algo](string);
     }
 
     // Block and block menu descriptions
@@ -20,7 +18,7 @@
             ['r', 'hash of %s with %m.hashes', 'hash', "hello world"],
         ],
         menus: {
-            hashes: ["sha1", "sha256", "sha384", "sha512", "md5"]
+            hashes: ["MD5", "SHA1", "SHA256", "SHA512", "SHA3", "RIPEMD160"]
         }
     };
 
