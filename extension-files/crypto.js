@@ -5,7 +5,11 @@
     // Status reporting code
     // Use this to report missing hardware, plugin or unsupported browser
     ext._getStatus = function() {
-        return {status: 2, msg: 'Ready'};
+        if (window.btoa && window.atob) {
+            return {status: 2, msg: 'Ready'};
+        } else {
+            return {status: 0, msg: 'Browser not supported'};
+        }
     };
     
     ext.hash = function(string, algo) {
@@ -63,10 +67,10 @@
         return decrypted.toString(CryptoJS.enc.Utf8);
     }
     ext.encBase64 = function(message) {
-        return CryptoJS.enc.Base64.stringify(message);
+        return window.atob(message);
     }
     ext.decBase64 = function(base64) {
-        return CryptoJS.enc.Base64.parse(base64);
+        return window.btoa(base64);
     }
 
     // Block and block menu descriptions
