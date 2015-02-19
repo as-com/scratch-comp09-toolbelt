@@ -11,6 +11,8 @@ var toolbeltReady = false;
 	$LAB
 	.setOptions({UseLocalXHR:false})
 	.script(bp + "general.js")
+	.script(bp + "lib/cryptojs-core.min.js")
+	.script(bp + "lib/cryptojs-enc-base64.min.js")
 	.script(bp + "lib/cryptojs-md5.min.js")
 	.script(bp + "lib/cryptojs-ripemd160.min.js")
 	.script(bp + "lib/cryptojs-sha1.min.js")
