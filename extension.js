@@ -3,17 +3,18 @@
 
 var toolbeltReady = false;
 
-(function(){
+(function() {
 	var bp = "//as-com.github.io/scratch-comp09-toolbelt/extension-files/";
 	head.load([
 		// browser.js dependencies
 		bp + "lib/vex.combined.min.js",
 		bp + "lib/vex.min.css",
 		bp + "lib/vex-theme-os.min.css"
-		], function() {
-	    head.load([
+	], function() {
+		head.load([
 			bp + "browser.js",
 			// crypto.js dependencies
+			bp + "lib/base64.min.js",
 			bp + "lib/cryptojs-md5.min.js",
 			bp + "lib/cryptojs-ripemd160.min.js",
 			bp + "lib/cryptojs-sha1.min.js",
@@ -21,19 +22,19 @@ var toolbeltReady = false;
 			bp + "lib/cryptojs-sha512.min.js",
 			bp + "lib/cryptojs-sha3.min.js",
 			bp + "lib/cryptojs-aes.min.js",
-	    	], function() {
-	    		head.load([
-	    			bp + "crypto.js",
-	    			// operators.js dependencies (none yet)
-	    			], function() {
-	    				head.load([
-	    					bp + "operators.js"
-	    					], function() {
-	    						toolbeltReady = true;
-	    						console.log("Loaded comp09 toolbelt scripts");
-	    				});
-	    			});
-	    	});
+		], function() {
+			head.load([
+				bp + "crypto.js",
+				// operators.js dependencies (none yet)
+			], function() {
+				head.load([
+					bp + "operators.js"
+				], function() {
+					toolbeltReady = true;
+					console.log("Loaded comp09 toolbelt scripts");
+				});
+			});
+		});
 	});
 	// $LAB
 	// .setOptions({UseLocalXHR:false})
@@ -51,8 +52,7 @@ var toolbeltReady = false;
 	// 	console.log("loaded comp09 toolbelt scripts");
 	// 	toolbeltReady = true;
 	// });
+
 	
-	// Load base64 polyfill
-	head.test((window.btoa && window.atob), [], bp + "lib/base64.min.js");
 
 })();
