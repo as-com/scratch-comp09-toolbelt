@@ -53,7 +53,7 @@
     };
     
     ext.aesEncrypt = function(plaintext, passphrase) {
-        return CryptoJS.AES.encrypt(plaintext, passphrase, { format: JsonFormatter });
+        return String(CryptoJS.AES.encrypt(plaintext, passphrase, { format: JsonFormatter }));
     }
     ext.aesDecrypt = function(ciphertext, passphrase) {
         decrypted = CryptoJS.AES.decrypt(ciphertext, passphrase, { format: JsonFormatter });
