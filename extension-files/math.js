@@ -20,6 +20,12 @@
     ext.joinFour = function(a, b, c, d) {
         return String(a) + String(b) + String(c) + String(d);
     }
+    ext.gte = function(a, b) {
+        return (a >= b);
+    }
+    ext.lte = function(a, b) {
+        return (a <= b);
+    }
     
     // Block and block menu descriptions
     var descriptor = {
@@ -27,7 +33,9 @@
             ['r', '%n ^ %n', 'exp', "2", "3"],
             ['r', "join %s %s %s %s", "joinFour", "a", "b", "c", "d"],
             ['b', '%s != %s (case sensitive)', 'neq'],
-            ['b', "%s = %s (case sensitive)", "eq"]
+            ['b', "%s = %s (case sensitive)", "eq"],
+            ['b', "%n >= %n", 'gte'],
+            ['b', "%n <= %n", 'lte']
         ],
         menus: {
             
