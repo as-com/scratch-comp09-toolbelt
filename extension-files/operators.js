@@ -43,5 +43,5 @@
     };
 
     // Register the extension
-    ScratchExtensions.register('comp09 - math', descriptor, ext);
+    ScratchExtensions.register('comp09 - operators', descriptor, ext);
 })({});
