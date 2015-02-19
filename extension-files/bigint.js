@@ -32,7 +32,7 @@
         blocks: [
             ['r', '฿ from text %s base %n', 'createBigInt', "9001", "10"],
             ['r', '฿%s %m.operations %s', 'bigIntOperation', "", "+", ""],
-            ['r', '฿ to text %s base %n', 'bitIntToText', "", "10"]
+            ['r', '฿ to text %s base %n', 'bigIntToText', "", "10"]
         ],
         menus: {
             operations: ['+', '-', '*']
