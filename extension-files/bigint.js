@@ -11,6 +11,15 @@
     ext.createBigInt = function(number, base) {
         return JSON.stringify(str2bigInt(number, base));
     }
+    function cleanArray(actual){
+        var newArray = new Array();
+        for(var i = 0; i<actual.length; i++){
+            if (actual[i]){
+                newArray.push(actual[i]);
+            }
+        }
+        return newArray;
+    }
     ext.bigIntOperation = function(a, op, b) {
         var one = JSON.parse(a);
         var two = JSON.parse(b);
@@ -22,7 +31,10 @@
             case "*":
                 return JSON.stringify(mult(one, two));
             case "/":
-                return JSON.stringify();
+                q = new Array(one.length);
+                r = [];
+                divide_(a, b, q, r);
+                return JSON.stringify(cleanArray(q));
         }
     }
     
@@ -31,6 +43,7 @@
         blocks: [
             ['r', 'text to bigint %s with base %n', 'createBigInt', "9001", "10"],
             ['r', 'bigint %s %m.operations %s', 'bigIntOperation', "", "+", ""],
+            ['r', 'bigint to text %s with base %n', 'convertBigInt', "", "10"]
         ],
         menus: {
             operations: ['+', '-', '*', '/']
