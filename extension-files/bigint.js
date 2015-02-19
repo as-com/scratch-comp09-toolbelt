@@ -11,14 +11,29 @@
     ext.createBigInt = function(number, base) {
         return JSON.stringify(str2bigInt(number, base));
     }
+    ext.bigIntOperation = function(a, op, b) {
+        var one = JSON.parse(a);
+        var two = JSON.parse(b);
+        switch (op) {
+            case "+":
+                return JSON.stringify(add(one, two));
+            case "-":
+                return JSON.stringify(sub(one, two));
+            case "*":
+                return JSON.stringify(mult(one, two));
+            case "/":
+                return JSON.stringify();
+        }
+    }
     
     // Block and block menu descriptions
     var descriptor = {
         blocks: [
-            ['r', 'text to bigint %s with base %n', 'createBigInt', "", "9001"],
+            ['r', 'text to bigint %s with base %n', 'createBigInt', "9001", "10"],
+            ['r', 'bigint %s %m.operations %s', 'bigIntOperation', "", "+", ""],
         ],
         menus: {
-            oneOps: ['abs', '']
+            operations: ['+', '-', '*', '/']
         },
         url: 'https://as-com.github.io/scratch-comp09-toolbelt/'
     };
