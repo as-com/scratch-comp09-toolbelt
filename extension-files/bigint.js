@@ -9,7 +9,7 @@
     };
     
     ext.createBigInt = function(number, base) {
-        return JSON.stringify(str2BigInt(number, base));
+        return JSON.stringify(str2bigInt(number, base));
     }
     
     // Block and block menu descriptions
