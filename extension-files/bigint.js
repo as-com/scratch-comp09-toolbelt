@@ -11,15 +11,6 @@
     ext.createBigInt = function(number, base) {
         return JSON.stringify(str2bigInt(number, base));
     }
-    function cleanArray(actual){
-        var newArray = new Array();
-        for(var i = 0; i<actual.length; i++){
-            if (actual[i]){
-                newArray.push(actual[i]);
-            }
-        }
-        return newArray;
-    }
     ext.bigIntOperation = function(a, op, b) {
         var one = JSON.parse(a);
         var two = JSON.parse(b);
@@ -30,11 +21,6 @@
                 return JSON.stringify(sub(one, two));
             case "*":
                 return JSON.stringify(mult(one, two));
-            case "/":
-                var q = new Array(one.length);
-                var r = [];
-                divide_(one, two, q, r);
-                return JSON.stringify(q);
         }
     }
     
@@ -46,7 +32,7 @@
             ['r', 'bigint to text %s with base %n', 'convertBigInt', "", "10"]
         ],
         menus: {
-            operations: ['+', '-', '*', '/']
+            operations: ['+', '-', '*']
         },
         url: 'https://as-com.github.io/scratch-comp09-toolbelt/'
     };
