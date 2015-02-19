@@ -11,7 +11,13 @@ var toolbeltReady = false;
 	$LAB
 	.setOptions({UseLocalXHR:false})
 	.script(bp + "general.js")
-	.script(bp + "lib/forge.min.js").wait()
+	.script(bp + "lib/cryptojs-md5.min.js")
+	.script(bp + "lib/cryptojs-ripemd160.min.js")
+	.script(bp + "lib/cryptojs-sha1.min.js")
+	.script(bp + "lib/cryptojs-sha256.min.js")
+	.script(bp + "lib/cryptojs-sha512.min.js")
+	.script(bp + "lib/cryptojs-sha3.min.js")
+	.script(bp + "lib/cryptojs-aes.min.js").wait()
 	.script(bp + "crypto.js").wait(function(){
 		console.log("loaded comp09 toolbelt scripts");
 		toolbeltReady = true;
