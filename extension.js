@@ -18,7 +18,8 @@ var toolbeltReady = false;
 	.script(bp + "lib/cryptojs-sha512.min.js")
 	.script(bp + "lib/cryptojs-sha3.min.js")
 	.script(bp + "lib/cryptojs-aes.min.js").wait()
-	.script(bp + "crypto.js").wait(function(){
+	.script(bp + "crypto.js").wait()
+	.script(bp + "math.js").wait(function(){
 		console.log("loaded comp09 toolbelt scripts");
 		toolbeltReady = true;
 	});
