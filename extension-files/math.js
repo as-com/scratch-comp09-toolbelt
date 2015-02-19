@@ -8,11 +8,26 @@
         return {status: 2, msg: 'Ready'};
     };
     
+    ext.exp(base, power) {
+        return Math.pow(base, exponent);
+    }
+    ext.neq(a, b) {
+        return (a != b);
+    }
+    ext.eq(a, b) {
+        return (a != b);
+    }
+    ext.join(a, b, c, d) {
+        return String(a) + String(b) + String(c) + String(d);
+    }
     
     // Block and block menu descriptions
     var descriptor = {
         blocks: [
             ['r', '%n^%n', 'exp'],
+            ['r', "join%s%s%s%s", "joinFour"],
+            ['b', '%s!=%s (case sensitive)', 'neq'],
+            ['b', "%s=%s (case sensitive)", "eq"]
         ],
         menus: {
             
