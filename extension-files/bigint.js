@@ -24,7 +24,7 @@
         }
     }
     ext.bigIntToText = function(input, base) {
-        return bigInt2Str(JSON.parse(input), base);
+        return bigInt2str(JSON.parse(input), base);
     }
     
     // Block and block menu descriptions
