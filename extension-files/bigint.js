@@ -8,14 +8,21 @@
         return {status: 2, msg: 'Ready'};
     };
     
-    ext.exp = function(base, power) {
-        return Math.pow(base, power);
+    var bigInts = {};
+    
+    ext.setBigInt = function(name, value) {
+        bigInts[name] = bigInt(value);
+    }
+    ext.getBigInt = function(name, radix) {
+        return bigInts[name].toString(radix);
     }
     
     // Block and block menu descriptions
     var descriptor = {
         blocks: [
-            ['r', '%n ^ %n', 'exp', "2", "3"],
+            ['', 'set bigint %s to %s', 'setBigInt', "", "9001"],
+            ['r', 'get bigint %s in radix %n', 'getBigInt', "", "10"],
+            
         ],
         menus: {
             
