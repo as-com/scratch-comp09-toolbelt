@@ -23,13 +23,16 @@
                 return JSON.stringify(mult(one, two));
         }
     }
+    ext.bigIntToText = function(input, base) {
+        return bigInt2Str(JSON.parse(input), base);
+    }
     
     // Block and block menu descriptions
     var descriptor = {
         blocks: [
             ['r', '฿ from text %s base %n', 'createBigInt', "9001", "10"],
             ['r', '฿%s %m.operations %s', 'bigIntOperation', "", "+", ""],
-            ['r', '฿ to text %s base %n', 'convertBigInt', "", "10"]
+            ['r', '฿ to text %s base %n', 'bitIntToText', "", "10"]
         ],
         menus: {
             operations: ['+', '-', '*']
