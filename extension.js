@@ -57,6 +57,14 @@ var toolbeltReady = false;
 		},
 		function(callback) {
 			head.load(bp + "operators.js", callback);
+		},
+		function(callback) {
+			head.load([
+				// bigint.js dependencies
+				bp + "lib/biginteger.min.js",
+			], function() {
+				head.load(bp + "bigint.js", callback);
+			});
 		}
 	], function(err, results) {
 		toolbeltReady = true;
