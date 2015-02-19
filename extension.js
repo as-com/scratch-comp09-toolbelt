@@ -10,7 +10,7 @@ var toolbeltReady = false;
 	var bp = "//as-com.github.io/scratch-comp09-toolbelt/extension-files/";
 	$LAB
 	.setOptions({UseLocalXHR:false})
-	.script(bp + "general.js")
+	.script(bp + "browser.js")
 	.script(bp + "lib/cryptojs-md5.min.js")
 	.script(bp + "lib/cryptojs-ripemd160.min.js")
 	.script(bp + "lib/cryptojs-sha1.min.js")
@@ -18,7 +18,7 @@ var toolbeltReady = false;
 	.script(bp + "lib/cryptojs-sha512.min.js")
 	.script(bp + "lib/cryptojs-sha3.min.js")
 	.script(bp + "lib/cryptojs-aes.min.js").wait()
-	.script(bp + "crypto.js").wait()
+	.script(bp + "crypto.js")//.wait()
 	.script(bp + "operators.js").wait(function(){
 		console.log("loaded comp09 toolbelt scripts");
 		toolbeltReady = true;
