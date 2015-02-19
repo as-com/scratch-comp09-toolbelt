@@ -17,9 +17,11 @@
         blocks: [
             // Block type, block name, function name, param1 default value, param2 default value
             ['b', 'toolbelt loaded?', 'isReady'],
-        ]
+        ],
+        url: 'https://as-com.github.io/scratch-comp09-toolbelt/'
     };
 
     // Register the extension
     ScratchExtensions.register('comp09 - general', descriptor, ext);
+    
 })({});
