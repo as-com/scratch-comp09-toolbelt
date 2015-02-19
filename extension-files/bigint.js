@@ -28,7 +28,7 @@
     var descriptor = {
         blocks: [
             ['r', '฿ from text %s base %n', 'createBigInt', "9001", "10"],
-            ['r', '฿ %s %m.operations %s', 'bigIntOperation', "", "+", ""],
+            ['r', '฿%s %m.operations %s', 'bigIntOperation', "", "+", ""],
             ['r', '฿ to text %s base %n', 'convertBigInt', "", "10"]
         ],
         menus: {
