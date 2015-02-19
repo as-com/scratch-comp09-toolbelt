@@ -24,8 +24,8 @@
     // Block and block menu descriptions
     var descriptor = {
         blocks: [
-            ['r', '%n ^ %n', 'exp'],
-            ['r', "join%s%s%s%s", "joinFour"],
+            ['r', '%n ^ %n', 'exp', "2", "3"],
+            ['r', "join%s%s%s%s", "joinFour", "a", "b", "c", "d"],
             ['b', '%s != %s (case sensitive)', 'neq'],
             ['b', "%s = %s (case sensitive)", "eq"]
         ],
