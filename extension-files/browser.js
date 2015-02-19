@@ -22,6 +22,6 @@
     };
 
     // Register the extension
-    ScratchExtensions.register('comp09 - general', descriptor, ext);
+    ScratchExtensions.register('comp09 - browser', descriptor, ext);
     
 })({});
