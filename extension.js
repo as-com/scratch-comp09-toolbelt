@@ -9,7 +9,7 @@ var toolbeltReady = false;
 		// browser.js dependencies
 		bp + "lib/vex.combined.min.js",
 		bp + "lib/vex.min.css",
-		bp + "lib/vex-theme-os.min.js"
+		bp + "lib/vex-theme-os.min.css"
 		], function() {
 	    head.load([
 			bp + "browser.js",
