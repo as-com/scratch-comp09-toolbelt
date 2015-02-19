@@ -9,7 +9,7 @@
     };
     
     ext.hash = function(string, algo) {
-        return CryptoJS[algo](string);
+        return CryptoJS[algo](string).toString(CryptoJS.enc.Hex);
     }
 
     // Block and block menu descriptions
