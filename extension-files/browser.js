@@ -63,7 +63,7 @@
             ['b', 'toolbelt loaded?', 'isReady'],
             ['w', 'alert %s', 'vexAlert', 'text'],
             ['B', 'confirm %s true: %s false: %s', 'vexConfirm', 'text', 'Ok', 'Cancel'],
-            ['B', 'prompt %s placeholder: %s ok: %s cancel %s', 'vexPrompt', 'text', 'answer', 'Ok', 'Cancel'],
+            ['R', 'prompt %s placeholder: %s ok: %s cancel %s', 'vexPrompt', 'text', 'answer', 'Ok', 'Cancel'],
             ['', 'set cookie %s to %s', 'setCookie', 'name', 'data'],
             ['', 'delete cookie %s', 'deleteCookie', 'name'],
             ['r', 'cookie %s', 'getCookie', 'name']
