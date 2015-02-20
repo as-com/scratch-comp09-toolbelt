@@ -62,6 +62,14 @@
         }
     }
     
+    ext.encCloud = function(text) {
+        return "0x" + bytesToHex(pako.deflateRaw(text, { level: 9 }));
+        
+    }
+    ext.decCloud = function(text) {
+        return pako.inflateRaw(text.substr(2, text.length - 2), { to: "string" });
+    }
+    
     // Block and block menu descriptions
     var descriptor = {
         blocks: [
