@@ -58,8 +58,7 @@
             ['b', "%n >= %n", 'gte'],
             ['b', "%n <= %n", 'lte'],
             ['b', "true", "returnTrue"],
-            ['b', "false", "returnFalse"],
-            ['b', 'convert %s to bool', 'convertToBool', "0"]
+            ['b', "false", "returnFalse"]
         ],
         menus: {
             
