@@ -67,7 +67,7 @@
         
     }
     ext.decCloud = function(text) {
-        return pako.inflateRaw(text.substr(2, text.length - 2), { to: "string" });
+        return pako.inflateRaw(hexToBytes(text.substr(2, text.length - 2)), { to: "string" });
     }
     
     // Block and block menu descriptions
