@@ -8,6 +8,21 @@
         return {status: 2, msg: 'Ready'};
     };
     
+    // Convert a byte array to a hex string
+    function bytesToHex(bytes) {
+            for (var hex = [], i = 0; i < bytes.length; i++) {
+                    hex.push((bytes[i] >>> 4).toString(16));
+                    hex.push((bytes[i] & 0xF).toString(16));
+            }
+            return hex.join("");
+    }
+    // Convert a hex string to a byte array
+    function hexToBytes(hex) {
+            for (var bytes = [], c = 0; c < hex.length; c += 2)
+                    bytes.push(parseInt(hex.substr(c, 2), 16));
+            return bytes;
+    }
+    
     ext.exp = function(base, power) {
         return Math.pow(base, power);
     }
@@ -53,6 +68,8 @@
             ['r', '%n ^ %n', 'exp', "2", "3"],
             ['r', "join %s %s %s %s", "joinFour", "a", "b", "c", "d"],
             ['r', "if %b then %s else %s", "compactIfElse", null, "a", "b"],
+            ['r', "encode text %s for cloud data", "encCloud", ''],
+            ['r', "decode text %s from cloud data", "decCloud", ''],
             ['b', '%s != %s (case sensitive)', 'neq'],
             //['b', "%s = %s (case sensitive)", "eq"],
             ['b', "%n >= %n", 'gte'],
