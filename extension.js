@@ -56,7 +56,11 @@ var toolbeltReady = false;
 			});
 		},
 		function(callback) {
-			head.load(bp + "operators.js", callback);
+			head.load([
+				"//cdn.jsdelivr.net/pako/0.2.5/pako.min.js"
+			], function() {
+				head.load(bp + "operators.js", callback);
+			});
 		},
 		function(callback) {
 			head.load([
