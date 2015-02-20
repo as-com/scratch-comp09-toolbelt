@@ -33,6 +33,19 @@
             return b;
         }
     }
+    ext.returnTrue = function() {
+        return true;
+    }
+    ext.returnFalse = function() {
+        return false;
+    }
+    ext.convertToBool = function(input) {
+        if (input) {
+            return true;
+        } else {
+            return false;
+        }
+    }
     
     // Block and block menu descriptions
     var descriptor = {
@@ -43,7 +56,10 @@
             ['b', '%s != %s (case sensitive)', 'neq'],
             //['b', "%s = %s (case sensitive)", "eq"],
             ['b', "%n >= %n", 'gte'],
-            ['b', "%n <= %n", 'lte']
+            ['b', "%n <= %n", 'lte'],
+            ['b', "true", "returnTrue"],
+            ['b', "false", "returnFalse"],
+            ['b', 'convert %s to bool', 'convertToBool', "0"]
         ],
         menus: {
             
