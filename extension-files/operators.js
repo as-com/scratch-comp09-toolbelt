@@ -41,7 +41,7 @@
             ['r', "join %s %s %s %s", "joinFour", "a", "b", "c", "d"],
             ['r', "if %b then %s else %s", "compactIfElse", null, "a", "b"],
             ['b', '%s != %s (case sensitive)', 'neq'],
-            ['b', "%s = %s (case sensitive)", "eq"],
+            //['b', "%s = %s (case sensitive)", "eq"],
             ['b', "%n >= %n", 'gte'],
             ['b', "%n <= %n", 'lte']
         ],
