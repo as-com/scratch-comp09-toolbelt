@@ -83,7 +83,8 @@
             ['b', "%n >= %n", 'gte'],
             ['b', "%n <= %n", 'lte'],
             ['b', "true", "returnTrue"],
-            ['b', "false", "returnFalse"]
+            ['b', "false", "returnFalse"],
+            ['', 'multiline test %q', null, ''],
         ],
         menus: {
             
