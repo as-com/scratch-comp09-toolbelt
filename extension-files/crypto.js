@@ -84,7 +84,7 @@
     // Block and block menu descriptions
     var descriptor = {
         blocks: [
-            ['r', 'hash %s with %m.hashes', 'hash', "hello world", "sha3"],
+            ['r', 'hash %s with %m.hashes', 'hash', "hello world", "SHA3"],
             ['r', 'aes encrypt %s with passphrase %s', "aesEncrypt", "message", "secret"],
             ['r', 'aes decrypt %s with passphrase %s', "aesDecrypt", "encrypted", "secret"],
             ['r', 'encode base64 %s', "encBase64", "string"],
