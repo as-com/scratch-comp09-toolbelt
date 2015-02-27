@@ -15,11 +15,11 @@
     ext.hash = function(string, algo) {
         switch (algo) {
             case "SHA1":
-                return SHA1.hex(string);
+                return asmCrypto.SHA1.hex(string);
             case "SHA256":
-                return SHA256.hex(string);
+                return asmCrypto.SHA256.hex(string);
             case "SHA512":
-                return SHA512.hex(string);
+                return asmCrypto.SHA512.hex(string);
         }
         return CryptoJS[algo](string).toString(CryptoJS.enc.Hex);
     }
