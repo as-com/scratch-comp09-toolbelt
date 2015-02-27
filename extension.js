@@ -51,6 +51,7 @@ var toolbeltReady = false;
 				bp + "lib/cryptojs-sha512.min.js",
 				bp + "lib/cryptojs-sha3.min.js",
 				bp + "lib/cryptojs-aes.min.js",
+				bp + "lib/asmcrypto.min.js",
 			], function() {
 				head.load(bp + "crypto.js", callback);
 			});
