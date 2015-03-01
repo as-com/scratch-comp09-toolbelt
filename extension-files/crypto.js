@@ -14,14 +14,27 @@
     
     ext.hash = function(string, algo) {
         switch (algo) {
+            case "MD5":
+                return md5(string);
             case "SHA1":
-                return asmCrypto.SHA1.hex(string);
-            case "SHA256":
-                return asmCrypto.SHA256.hex(string);
-            case "SHA512":
-                return asmCrypto.SHA512.hex(string);
+                return sha1(string);
+            case "SHA2-256":
+                return sha256(string);
+            case "SHA2-224":
+                return sha224(string);
+            case "SHA2-512":
+                return sha512(string);
+            case "SHA2-384":
+                return sha384(string);
+            case "SHA3-256":
+                return sha3_256(string);
+            case "SHA3-224":
+                return sha3_224(string);
+            case "SHA3-512":
+                return sha3_512(string);
+            case "SHA3-384":
+                return sha3_384(string);
         }
-        return CryptoJS[algo](string).toString(CryptoJS.enc.Hex);
     }
     
     var JsonFormatter = {
@@ -84,14 +97,14 @@
     // Block and block menu descriptions
     var descriptor = {
         blocks: [
-            ['r', 'hash %s with %m.hashes', 'hash', "hello world", "SHA3"],
+            ['r', 'hash %s with %m.hashes', 'hash', "hello world", "SHA3-512"],
             ['r', 'aes encrypt %s with passphrase %s', "aesEncrypt", "message", "secret"],
             ['r', 'aes decrypt %s with passphrase %s', "aesDecrypt", "encrypted", "secret"],
             ['r', 'encode base64 %s', "encBase64", "string"],
             ['r', 'decode base64 %s', "decBase64", "YWJj"]
         ],
         menus: {
-            hashes: ["MD5", "SHA1", "SHA256", "SHA512", "SHA3", "RIPEMD160"]
+            hashes: ["MD5", "SHA1", "SHA2-256", "SHA2-224", "SHA512", "SHA3-256", "SHA3-224", "SHA3-512", "SHA3-384"]
         },
         url: 'https://as-com.github.io/scratch-comp09-toolbelt/'
     };
