@@ -9,7 +9,7 @@
     };
     
     var crossOrigin = "Anonymous";
-    //var pix = null;
+    var imageData = null;
     
     ext.setCrossDomain = function(input) {
         crossOrigin = input;
@@ -25,7 +25,7 @@
             canvas.width = img.width;
             canvas.height = img.height;
             ctx.drawImage(img, 0, 0);
-            pix = ctx.getImageData(0, 0, img.width, img.height).data;
+            imageData = ctx.getImageData(0, 0, img.width, img.height);
             callback();
         }
         img.src = src;
@@ -34,13 +34,21 @@
             img.src = src;
         }
     }
+    ext.getColor = function(x, y) {
+        red = imageData.data[((y*(imageData.width*4)) + (x*4))];
+        green = imageData.data[((y*(imageData.width*4)) + (x*4)) + 1];
+        blue = imageData.data[((y*(imageData.width*4)) + (x*4)) + 2];
+        
+        return red * 65535 + green * 256 + blue;
+    }
     
     // Block and block menu descriptions
     var descriptor = {
         blocks: [
             // Block type, block name, function name, param1 default value, param2 default value
             ['', 'set crossdomain to %s', 'setCrossDomain', "Anonymous"],
-            ['w', 'load image %s', 'loadImage', "http://i.imgur.com/wIOiMi4.jpg"]
+            ['w', 'load image %s', 'loadImage', "http://i.imgur.com/wIOiMi4.jpg"],
+            ['r', 'get color at x %n y %n', 'getColor', '0', '0']
         ],
         url: 'https://as-com.github.io/scratch-comp09-toolbelt/'
     };
@@ -49,4 +57,3 @@
     ScratchExtensions.register('comp09 - image', descriptor, ext);
     
 })({});
-var pix;
