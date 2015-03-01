@@ -41,6 +41,12 @@
         
         return red * 65535 + green * 256 + blue;
     }
+    ext.imageWidth = function() {
+        return imageData.width;
+    }
+    ext.imageHeight = function() {
+        return imageData.height;
+    }
     
     // Block and block menu descriptions
     var descriptor = {
@@ -48,7 +54,9 @@
             // Block type, block name, function name, param1 default value, param2 default value
             ['', 'set crossdomain to %s', 'setCrossDomain', "Anonymous"],
             ['w', 'load image %s', 'loadImage', "http://i.imgur.com/wIOiMi4.jpg"],
-            ['r', 'get color at x %n y %n', 'getColor', '0', '0']
+            ['r', 'get color at x %n y %n', 'getColor', '0', '0'],
+            ['r', 'image width', 'imageWidth'],
+            ['r', 'image height', 'imageHeight']
         ],
         url: 'https://as-com.github.io/scratch-comp09-toolbelt/'
     };
