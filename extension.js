@@ -67,6 +67,9 @@ var toolbeltReady = false;
 			], function() {
 				head.load(bp + "bigint.js", callback);
 			});
+		},
+		function(callback) {
+			head.load(bp + "image.js", callback);
 		}
 	], function(err, results) {
 		toolbeltReady = true;
