@@ -39,7 +39,7 @@
         green = imageData.data[((y*(imageData.width*4)) + (x*4)) + 1];
         blue = imageData.data[((y*(imageData.width*4)) + (x*4)) + 2];
         
-        return red * 65535 + green * 256 + blue;
+        return red * 65535 + blue * 256 + green;
     }
     ext.imageWidth = function() {
         return imageData.width;
