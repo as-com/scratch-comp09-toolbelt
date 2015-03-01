@@ -26,6 +26,7 @@
             canvas.height = img.height;
             ctx.drawImage(img, 0, 0);
             pix = ctx.getImageData(0, 0, img.width, img.height).data;
+            callback();
         }
         img.src = src;
         if ( img.complete || img.complete === undefined ) {
