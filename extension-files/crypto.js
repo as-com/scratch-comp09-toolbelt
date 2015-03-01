@@ -104,7 +104,7 @@
             ['r', 'decode base64 %s', "decBase64", "YWJj"]
         ],
         menus: {
-            hashes: ["MD5", "SHA1", "SHA2-256", "SHA2-224", "SHA512", "SHA3-256", "SHA3-224", "SHA3-512", "SHA3-384"]
+            hashes: ["MD5", "SHA1", "SHA2-256", "SHA2-224", "SHA2-512", "SHA2-384", "SHA3-256", "SHA3-224", "SHA3-512", "SHA3-384"]
         },
         url: 'https://as-com.github.io/scratch-comp09-toolbelt/'
     };
