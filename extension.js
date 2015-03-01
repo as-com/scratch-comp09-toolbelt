@@ -43,12 +43,8 @@ var toolbeltReady = false;
 		function(callback) {
 			head.load([
 				// crypto.js dependencies
-				bp + "lib/base64.min.js",
-				bp + "lib/cryptojs-md5.min.js",
-				bp + "lib/cryptojs-ripemd160.min.js",
-				bp + "lib/cryptojs-sha3.min.js",
-				bp + "lib/cryptojs-aes.min.js",
-				bp + "lib/asmcrypto.min.js",
+				bp + "lib/asmcrypto-aes.min.js",
+				"//cdn.jsdelivr.net/g/js-md5@0.2.2,js-sha1@0.2.0,js-sha256@0.2.3,js-sha512@0.2.2,js-sha3@0.1.2,hi-base64@0.1.3",
 			], function() {
 				head.load(bp + "crypto.js", callback);
 			});
